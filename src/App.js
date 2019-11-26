@@ -4,6 +4,7 @@ import './App.css';
 import DevelopersList from './components/DevelopersList'
 import Homepage from "./components/Homepage";
 import Toolbar from './components/Toolbar'
+import PostPage from './components/PostPage'
 import { Switch, Route } from "react-router-dom";
 
 export default class App extends React.Component {
@@ -15,6 +16,7 @@ export default class App extends React.Component {
           <Route path="/developers" component={DevelopersList} />
           <Route path="/" component={Homepage} />
         </Switch>
+        <Route path="/read/:id" component={PostPage} />
       </div>
     );
   }
