@@ -5,6 +5,7 @@ import DevelopersList from './components/DevelopersList'
 import Homepage from "./components/Homepage";
 import Toolbar from './components/Toolbar'
 import PostPage from './components/PostPage'
+import LoginPage from './components/LoginPage'
 import { Switch, Route } from "react-router-dom";
 
 export default class App extends React.Component {
@@ -14,7 +15,8 @@ export default class App extends React.Component {
         <Toolbar />
         <Switch>
           <Route path="/developers" component={DevelopersList} />
-          <Route path="/" component={Homepage} />
+          <Route path="/login" component={LoginPage} />
+          <Route component={Homepage} />
         </Switch>
         <Route path="/read/:id" component={PostPage} />
       </div>

@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
 import developerReducer from './developers/reducer.js'
 import sliceReducer from './slice/reducer'
+import loginReducer from './login/reducer'
 
 export default combineReducers({
   developers: developerReducer,
-  post: sliceReducer
+  post: sliceReducer,
+  loginCredentials: loginReducer
 });
 
 // export default function combinedReducer(state = {
